@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unsent</title>
+    <meta
+      name="description"
+      content="Six letters that were finished and never sent, performed aloud."
+    />
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,560&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">A short series for headphones</p>
+        <h1>Unsent.</h1>
+        <p class="lede">
+          Six letters that were finished and then left where they were. A narrator, the person who wrote it, and the ordinary reply that arrived instead.
+        </p>
+        <div class="transport">
+          <button id="play-all" type="button">Play the series</button>
+          <span id="total"></span>
+        </div>
+      </header>
+
+      <section class="layout">
+        <ol id="program" class="program"></ol>
+        <article id="now" class="now" hidden>
+          <p id="stamp" class="stamp">Letter</p>
+          <p id="place" class="place"></p>
+          <h2 id="title"></h2>
+          <p id="address" class="address"></p>
+          <audio id="player" controls preload="none"></audio>
+          <div class="actions">
+            <a id="download" download>Download this letter</a>
+            <button id="copy" type="button">Copy a post</button>
+          </div>
+          <ol id="script"></ol>
+        </article>
+      </section>
+
+      <section class="write">
+        <h2>Leave one of your own unsent.</h2>
+        <p class="hint">One take, about a minute. It stays in the browser unless you download it.</p>
+        <form id="own">
+          <label for="to">To</label>
+          <input id="to" name="to" maxlength="48" placeholder="a person, or a year" required />
+          <label for="letter">The letter</label>
+          <textarea id="letter" name="letter" maxlength="900" rows="7" required placeholder="Write it the way you would say it if you were sure nobody would answer."></textarea>
+          <fieldset>
+            <legend>Read by</legend>
+            <div class="voices">
+              <button type="button" data-voice="adrian" aria-pressed="true">Adrian</button>
+              <button type="button" data-voice="sheila" aria-pressed="false">Sheila</button>
+            </div>
+          </fieldset>
+          <button id="perform" type="submit">Perform it</button>
+          <p id="status" class="status" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Performed with Fish Audio, model drama-3. Narrator: Delia. Letters: Adrian and Sheila.</p>
+      <p><a href="https://github.com/pulkitxm/unsent">pulkitxm/unsent</a></p>
+    </footer>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
