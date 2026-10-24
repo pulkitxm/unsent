@@ -1,0 +1,26 @@
+{
+  "chart": {
+    "file": "chart.mp3",
+    "seconds": 136.89
+  },
+  "key": {
+    "file": "key.mp3",
+    "seconds": 163.07
+  },
+  "nineteen": {
+    "file": "nineteen.mp3",
+    "seconds": 166.54
+  },
+  "plant": {
+    "file": "plant.mp3",
+    "seconds": 160.98
+  },
+  "platform": {
+    "file": "platform.mp3",
+    "seconds": 141.91
+  },
+  "update": {
+    "file": "update.mp3",
+    "seconds": 145.28
+  }
+}
